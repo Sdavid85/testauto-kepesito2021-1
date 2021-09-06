@@ -22,7 +22,7 @@ results = ["25", "75"]
 
 
 def test_tc01():
-    table_numbers = driver.find_elements_by_name("number")
+    table_numbers = driver.find_elements_by_xpath('//*[@id="bingo-body"]//input')
     assert len(table_numbers) == int(results[0])
     numbers = driver.find_elements_by_xpath('//*[@id="numbers-list"]/li')
     assert len(numbers) == int(results[1])
