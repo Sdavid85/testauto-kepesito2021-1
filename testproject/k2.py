@@ -62,7 +62,6 @@ def test_tc03():
     time.sleep(2)
     stop_btn.click()
     time.sleep(2)
-    result_color_name = driver.find_element_by_id('testColorName')
     result_message = result()
     if random_color_name.text == test_color_name.text:
         assert result_message == messages[0]
