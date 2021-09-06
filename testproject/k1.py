@@ -13,6 +13,7 @@ driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=option
 driver.get("https://ambitious-sky-0d3acbd03.azurestaticapps.net/k1.html")
 time.sleep(2)
 
+
 def inputs(a, b):
     a_input = driver.find_element_by_id('a')
     b_input = driver.find_element_by_id('b')
@@ -25,6 +26,7 @@ def inputs(a, b):
     calc_btn.click()
     time.sleep(2)
 
+
 result = driver.find_element_by_id('result')
 a_inputs = ["", "2", ""]
 b_inputs = ["", "3", ""]
@@ -34,6 +36,7 @@ results = ["False", "10", "NaN"]
 #     * a: <üres>
 #     * b: <üres>
 #     * c: <nem látszik
+
 
 def test_tc01():
     a_input = ()
@@ -47,6 +50,7 @@ def test_tc01():
 #     * b: 3
 #     * c: 10
 
+
 def test_tc02():
     inputs(a_inputs[1], b_inputs[1])
     assert result.text == results[1]
@@ -55,6 +59,7 @@ def test_tc02():
 #     * a: <üres>
 #     * b: <üres>
 #     * c: NaN
+
 
 def test_tc03():
     inputs(a_inputs[2], b_inputs[2])
