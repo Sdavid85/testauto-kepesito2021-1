@@ -22,7 +22,7 @@ def fill_field(title):
 
 error_message = driver.find_elements_by_xpath("/html/body/form/span")
 inputs = ["abcd1234", "teszt233@", "abcd"]
-messages = ["False", "Only a-z and 0-9 characters allewed", "Title should be at least 8 characters; you entered 4."]
+messages = ["False", "Only a-z and 0-9 characters allewed", "Title should be at least 8 characters; you entered 4"]
 
 # TC01: Helyes kitöltés esete:
 #     * title: abcd1234
